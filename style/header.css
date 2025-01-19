@@ -1,0 +1,183 @@
+.cabecalho_menu-hamburguer{
+
+    width:24px;
+    height:24px;
+    background-image: url('../img/Menu.svg');   /*os dois pontos antes da /img é necessário para o vscode encontrar o arquivo css*/
+    background-repeat: no-repeat;               /*serve para que a imagem não seja repitida */
+    background-position: center;                /* centraliza a imagem de fundo*/
+    display: inline-block;
+}
+.conteiner_botao:checked~.conteiner__rótulo>.cabecalho_menu-hamburguer{ /* o tiu pcura uma condição com o checkbox foi clicado ele procurou a class que vem a seguir*/
+                                                /* ja o sinal de maior é usado para acessar a classe que esta dentro da maior/pai */
+    background-image: url('../img/Frame\ 20.svg');
+}
+.conteiner_botao:checked~.conteiner__rótulo{
+
+    background: var(--cor-roxo-azulado);
+}
+.cabecalho{
+
+    background-color: var(--cor-branca);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;                         /* transforma o cabeçalho em algo relativo permitindo ou liberando assim outras funcionalidades */
+}
+.conteiner{
+
+    display: flex;
+    align-items: center;
+}
+.conteiner_imagem{
+
+    padding: 0.8rem;
+
+}
+.lista-menu{
+
+    display: none;                              /* retira a lista de menu da tela em quanto não clicarem nela */
+    position: absolute;                         /* permite que o lista-menu se movimente em relação ao cabeçalho*/
+    top: 100%;                                  /* faz com que ele se distancie em 100% do topo ou do cabeçalho */
+    width:50vw;                                 /* ocupa 60% do viewport*/
+}
+.conteiner_botao:checked~.lista-menu{           /* quando for clicado no botão ele aciona a lista-menu e transforma em formato de block*/
+
+    display: block;
+}
+.conteiner_botao{
+
+    display:none;  
+    
+}
+.lista-menu_titulo,
+.lista-menu_item{
+
+    padding:0.5rem;
+    background-color: var(--cor-branca);
+}
+.lista-menu_titulo{
+
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+.lista-menu_link{
+
+    text-decoration: none;
+    background: var(--cor-roxo-azulado);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;               /* põe o que está dentro da classe em letra maiúscula*/
+
+}
+.conteiner_titulo{
+
+    display: none;   /* faz o conteúdo dentro desaparecer*/
+}
+.opções{
+
+    display: none;   /* faz o conteúdo dentro desaparecer*/
+}
+
+
+@media screen and (min-width: 1024px){
+
+    .conteiner_titulo,.conteiner_titulo-negrito{
+
+        font-family: var(--segunda-font);
+        display:flex;               /*esse display é apenas para o conteúdo aparecer, pois fizemos ele desaparecer com o display: none */
+        font-size: 30px;
+    }
+    .conteiner_titulo{
+
+        font-weight: 400;
+    }
+    .conteiner_titulo-negrito{
+
+        font-weight: 700;
+    }
+    .opções{
+        
+        display: flex;
+    }
+    .ancora_opções{
+
+        text-decoration: none;   
+        color: var(--cor-preta);
+    }
+    .opções_item{
+
+        list-style-type: none;
+        margin:1rem;
+        text-transform: uppercase;
+        color: var(--cor-preta);
+    }
+    .conteiner_imagem_transparente{
+
+        display:none;                   /* faz com que a imagem desapareça*/
+    }
+    .cabecalho_menu-hamburguer{
+
+        display: none;
+    }
+    .input_menu:checked~.lista-menu{            /*faz aparecer a lista quando clicado no checkbox */
+
+        display: block;
+        width: auto;
+    }
+    .input_menu{
+
+        display: none;                          /*some com a caixinha do checkbox*/
+    }
+    .lista-menu_item{
+
+        list-style-type: none;
+    }
+    .input_menu:checked~.opções__rótulo>.opções_item{
+
+        background: var(--cor-roxo-azulado);
+        color: var(--cor-branca);
+        
+    }
+    .opções_item{
+
+        padding: 1rem;
+    }
+    .lista-menu_item:hover {
+
+        background: var(--cor-roxo-azulado);
+    }
+    .lista-menu_item:hover>.lista-menu_link{
+
+        -webkit-text-fill-color: var(--cor-branca);
+    }
+}
+.parágrafo_header{
+
+    display: none;
+}
+
+@media screen and (min-width: 1728px) {     /* sua tela não tem 1728 pixels!*/
+
+    .parágrafo_header{
+
+        display:block;
+        color: var(--cor-preta);
+    }
+    .cabecalho_header {
+
+        display: flex;
+        align-items: center; 
+        text-decoration: none;
+    }
+    .cabecalho{
+
+        padding: 0 2rem;
+    }   
+    .opções{
+
+        margin-right: auto;    /* quando usamos a propriedade auto no margin right ou outros ele tenta preencher todo o lado com uma margem, logo empurra os elementos para o lado oposto!*/
+    }
+    
+    
+}

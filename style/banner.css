@@ -1,0 +1,70 @@
+.banner{
+
+    background: var(--cor-de-fundo-banner);/*não usamos o background-color pois essa cor é um gradiente ou seja um conjunto de cores misturadas*/
+    color: var(--cor-branca);
+    text-align: center;
+    padding: 1rem 2rem;
+}
+.banner_titulo{
+
+    font-size: 18px;
+    font-weight: 700;
+
+}
+.banner_texto{
+
+    font-weight: 500;
+    margin: 0.5rem 0 1rem 0;
+
+}
+.banner_pesquisa{
+
+    background-color: transparent;
+    border: 2px solid var(--cor-branca);
+    color: var(--cor-branca);
+    border-radius: 24px;
+    padding: 1rem;
+    width:100%;         /* ocupa 100% do que é permitido no baner*/
+}
+
+.banner_pesquisa::placeholder{  /* esse dois pontos(::) seleciona a propriedade placeholder dentro da tag 'input'*/
+                                /*precisamos utilizar novamente a fonte e compania pois o body so estiliza os item que estão por fora*/
+    font-family: var(--font-poppins);
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--cor-branca);
+    background: url('../img/icone_pesquisa.svg');
+    background-repeat: no-repeat;
+    background-position: 0.4em;
+    text-align: center;
+}
+@media screen and (min-width: 1024px){
+
+    .banner{
+
+        padding: 5rem;
+        
+    }
+    .banner_titulo{
+
+        font-size: 36px;
+        font-weight: 700;
+    }
+    .banner_pesquisa::placeholder{
+
+        font-size:1rem;
+        background-position:2.5rem ;
+    }
+    .banner_pesquisa{
+
+        width:40%;
+    }
+}
+@media screen and (min-width: 1728px){
+
+
+    .banner_pesquisa::placeholder{
+
+        background-position: 25%;
+    }
+}

@@ -1,0 +1,266 @@
+.carrossel_titulo{
+
+    color: var(--cor-laranja);
+    text-align: center;
+    background-color: var(--cor-branca);
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1rem 0 0.5rem 0;
+
+}
+.swiper-slide img{
+
+    width: 100%;
+
+}
+.swiper-button-prev,
+.swiper-button-next{
+
+    display: none;
+
+}
+.swiper-pagination {
+
+    position: initial;
+    margin: 0.5rem 0;
+}
+.card{
+
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1em;
+    padding: 1em;
+}
+.descricao_titulo{
+
+    color: var(--cor-laranja);
+    font-weight: 700;
+}
+.descricao_texto{
+    font-size: 14px;
+}
+.descricao_titulo-livro{
+
+    color: var(--cor-roxo);
+    font-size: 1.125rem;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+.card_descricao{
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
+.imagem-logo{
+
+    padding-bottom: 2em;
+    width: 50%;
+}
+.botões{
+
+    display: flex;
+    list-style-type: none;
+}
+.card_botões{
+
+    display: flex;
+    justify-content: space-between;
+}
+.card_botões{
+
+    margin: 0.5em 0;
+}
+.botões_item{
+
+    margin: 0 0.3rem;
+}
+.link_botão{
+    display:flex;
+    background-color:  var(--cor-laranja);
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-branca);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 1em 2.2em;
+}
+.banner_titulo_2{
+
+    text-align: center;
+    color: var(--cor-laranja);
+    background-color: var(--cor-branca);
+    padding: 1rem 0;
+}
+.card_2{
+
+    background-color: var(--cor-branca);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    gap:15px;
+}
+.card_descrição_1{
+
+    display: flex;
+}
+.titulo_autora{
+    color: var(--cor-laranja);
+    font-size: 1rem;
+    font-weight: 700;
+}
+.nome_autora{
+    color: var(--cor-roxo);
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0.5rem 0 0 0;
+}
+.card_parágrafo{
+    font-size: 14px;
+    margin: 0.5rem 0.5rem 0 0;
+}
+.card_descrição_1{
+
+    display: flex;
+    justify-content: space-between;
+}
+.imagem_autora{
+
+    width: 30vw; 
+}  
+
+.ancora{
+
+    text-decoration: none;
+    background-color: var(--cor-laranja);
+    color: var(--cor-branca);
+    padding: 1rem 0;
+    font-weight: 700;
+    font-size: 16px;
+    width: 35%;
+
+} 
+.card_descrição_2{
+
+    display:flex;
+    text-align: center;
+    margin: 0.5rem 0;
+    justify-content: space-between;
+
+}
+.card_div{
+
+    margin: 0 0.5rem 0 0;
+}
+@media screen and (min-width: 1024px){
+
+    .carrossel_titulo,.banner_titulo_2{
+
+        font-size: 26px;
+        padding: 3rem 0 1rem 0;
+    }
+    .swiper-button-prev,
+    .swiper-button-next{
+
+        display: block;
+        top:60%;
+
+    }
+    .swiper{
+
+        margin: 0 7rem;   
+    }
+    .swiper-pagination{
+
+        margin: 1rem;
+        padding: 2rem 0; 
+    }
+    .card{
+
+        width:40%;
+        margin: 3rem auto;
+    }
+    .card_2{
+        width: 40%;
+        margin: 3rem auto;
+    }
+    .imagem_autora{
+
+        width: 13vw;
+    }
+    .ancora{
+
+        width: 33%;
+    }
+    .imagem-logo{
+
+        margin-left: 3rem;
+        width: 24vw;
+    }
+    .link_botão{
+
+        width:24%
+    }
+
+}
+@media screen and (min-width:1728px){
+
+
+    .carrossel__conteiner{
+
+        display:flex;
+        align-items: center;
+        margin: 2rem 9rem
+    }
+    .card,
+    .card_2{
+
+       width: 35%;
+       margin-top: 5%;
+    }
+    .swiper-pagination{
+
+        padding: 1rem;
+        margin: 0; 
+    }
+    .descricao_titulo,
+    .titulo_autora{
+
+        font-size: 2rem;
+    }
+    .swiper{
+
+        width: 45%
+    }
+    .card_2{
+
+    }
+    .ancora{
+
+        width: 30%
+    }
+    .imagem_autora{
+
+        width:9vw;
+    }
+    .card_parágrafo{
+
+        width: 90%;
+    }
+    .descricao_titulo{
+
+        width: 120%
+    }
+    .descricao{
+
+        margin-right: 1rem;
+    }
+    .imagem-logo{
+
+        width:30%;
+    }
+}
